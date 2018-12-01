@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.notificationtest.Model.NotificationInfo;
+import com.example.notificationtest.Service.PlayerService;
 import com.example.notificationtest.Utils.PushUtil;
 import com.xiaomi.mipush.sdk.MiPushMessage;
 import com.xiaomi.mipush.sdk.PushMessageHelper;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initPush();
         initIntent(getIntent());
-
+        startService(new Intent(this, PlayerService.class));
     }
 
     @Override
