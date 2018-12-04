@@ -3,7 +3,7 @@
 国内提供系统级推送的有华为、小米以及魅族，前两个厂家的手机市场占有率最高，本人所在公司的 app 也都集成了前两家的系统级推送。
 所谓的全网通就是在集成华为小米系统级推送 SDK 的基础上，让其他品牌的手机用小米推送 SDK 再加上后台进程存活技术让小米推送 SDK 和小米消息服务器保持长连接，废话不多说，上干货。
 
-**总体概括一下：华为、小米用系统级推送，其它厂家用小米推送 SDK + 后台进程存活**
+**总体概括一下：华为、小米用系统级推送，其它厂家用小米推送 SDK + 后台进程存活。**
 
 ### 常见的推送接入方式
 - **在 Github 上你搜索华为、小米推送能搜出来不少优秀的项目，但是有些项目已经不维护了，有些考虑的很全面封装了很多类（有些开发者用不到）**
@@ -14,7 +14,7 @@
 
 ### 我封装的推送类特点
 - **轻量级就几个类（优化了二家 SDK 要求注册的服务和接收器），比较省内存；**
-- **app 客户端集成只需要半个小时（前提是华为和小米的推送服务已经申请并且通过）；**
+- **app 客户端集成只需要半个小时（前提是华为*__*****和小米的推送服务已经申请并且通过）；**
 - **服务端代码还是比较简单的，看一下官司方文档也就半个小时的事（我下面提供 Java 版的后台代码，其它语言触类旁通）；**
 - **最重要的一点，它真的实现全网通，效果还不错。**
 
@@ -65,11 +65,11 @@ json 是后台传给 Activity 的值。
 小米系统推送依赖 小米服务框架 app，这个 app 是系统级的，同时这个 app 和消息服务器有长连接，所以咱们自己的 app 即使已经退出了，但是小米服务框架在收到消息后就会启动我们 app 的 Activity。
 
 ### 小米推送后台
-```Java
+```Java``
 Constants.useOfficial();
 Sender sender = new Sender(appSecret);
-Message.Builder builder = new Message.Builder();
-builder.title("通知");
+Message.Builder builder = new Message.Builder();``
+builder.title("通知");``
 builder.description("这是测试");
 builder.payload(content);
 builder.restrictedPackageName("com.example.notificationtest");
