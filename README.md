@@ -65,7 +65,7 @@ json 是后台传给 Activity 的值。
 小米系统推送依赖 小米服务框架 app，这个 app 是系统级的，同时这个 app 和消息服务器有长连接，所以咱们自己的 app 即使已经退出了，但是小米服务框架在收到消息后就会启动我们 app 的 Activity。
 
 ### 小米推送后台
-```Java``
+```Java
 Constants.useOfficial();
 Sender sender = new Sender(appSecret);
 Message.Builder builder = new Message.Builder();``
