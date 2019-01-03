@@ -87,6 +87,3 @@ sender.sendToUserAccount(message, account, 3);
 
 ### 其它厂家
 默认使用小米的推送 SDK 就好，只不过多了一步开启前台服务，原理还是 app 在存活的情况下，小米推送 SDK 和消息服务器有长连接。
-
-### 老规矩
-![weixin](https://raw.githubusercontent.com/qiuqiu3/NotificationTest/master/Screenshots/weixin.png)
